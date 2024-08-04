@@ -55,7 +55,7 @@ const Chat = ({socket, username, room}) => {
         <div className="card-container flex flex-col justify-between h-full">
 
           <CardHeader className="max-h-min">
-            <Typography variant="h2" color="black" className="my-5 md:mt-2">
+            <Typography color="black" className="mb-5 mt-7 md:mt-2 text-lg md:text-2xl font-semibold">
               {`Chat en vivo | Sala ${room}`}
             </Typography>
           </CardHeader>
@@ -65,9 +65,9 @@ const Chat = ({socket, username, room}) => {
               messagesList.map((item, i) => {
                 return (
                   <span key={i}>
-                    <Card className={`mt-1 max-w-min ${username === item.author ? 'ml-auto' : 'mr-auto'} ${username === item.author ? 'bg-blue-200' : 'bg-green-100'}`} style={{overflow: 'hidden'}}>
-                        <Typography className="mt-3 mx-3" color={username === item.author ? 'gray' : 'blue-gray'} style={{textAlign: username === item.author ? 'right' : 'left'}}> {item.author} </Typography>
-                        <p className="text-black text-wrap break-words md:max-w-5xl max-w-60 mb-5 mx-5" style={{textAlign: username === item.author ? 'right' : 'left'}}> 
+                    <Card className={`mt-3 w-fit md:max-w-5xl max-w-60 ${username === item.author ? 'ml-auto' : 'mr-auto'} ${username === item.author ? 'bg-blue-200' : 'bg-green-100'}`} style={{overflow: 'hidden'}}>
+                        <Typography className="my-3 mx-5 text-sm md:text-lg" color={'gray'} style={{textAlign: username === item.author ? 'right' : 'left'}}> {item.author} </Typography>
+                        <p className="text-black text-wrap text-xs md:text-base break-words whitespace-pre md:max-w-5xl max-w-60 mb-5 mx-5" style={{textAlign: username === item.author ? 'right' : 'left'}}> 
                           {item.message}
                         </p>                     
                     </Card>
