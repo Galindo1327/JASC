@@ -32,7 +32,10 @@ function App() {
     <div>
       { !showChat ? (
         <div className="bg-slate-900 w-screen h-screen flex justify-center items-center">
-          <Card className="w-96 max-w-sm mx-min">
+          <Card 
+            className="w-96 max-w-sm mx-min"
+            onKeyDown={(e) => e.key === "Enter" && joinRoom()}
+          >
             <CardHeader
               variant="gradient"
               color="teal"
