@@ -35,7 +35,7 @@ function App() {
           <Card className="w-96 max-w-sm mx-min">
             <CardHeader
               variant="gradient"
-              color="deep-purple"
+              color="teal"
               className="mb-4 grid h-28 place-items-center"
             >
               <Typography variant="h3" color="white">
