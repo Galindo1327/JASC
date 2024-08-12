@@ -13,8 +13,9 @@ import {
   Button,
 } from "@material-tailwind/react";
 
+const URL = import.meta.env.VITE_CONNECT_URL || "http://localhost:3001"
 
-const socket = io.connect("http://localhost:3001")
+const socket = io.connect(URL)
 
 function App() {
   const [username, setUsername] = useState("")
